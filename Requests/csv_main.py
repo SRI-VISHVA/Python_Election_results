@@ -10,7 +10,7 @@ start_time = time.time()
 if os.path.exists('election_results2k19.csv'):
     with open('election_results2k19.csv', mode='r', newline='') as csv1:
         csvreader = csv.reader(csv1)
-        # check if csv file is writtien
+        # verify if csv file is writtien 
         for row in csvreader:
             try:
                 # check if db exists
