@@ -6,11 +6,14 @@ from csv_function import get_election_result, main_list, state_list, party_perce
 import tkinter as tk
 
 start_time = time.time()
+# Check if csv file exsist 
 if os.path.exists('election_results2k19.csv'):
     with open('election_results2k19.csv', mode='r', newline='') as csv1:
         csvreader = csv.reader(csv1)
+        # verify if csv file is writtien 
         for row in csvreader:
             try:
+                # check if db exists
                 if os.path.exists('election_results2k19.db'):
                     # Creating a gui for getting state name using Entry and Button
                     # top = Tk()
